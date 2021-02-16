@@ -27,17 +27,17 @@ N = 0 #Для подсчета номера
 r = [] #Для соотношения буквы с позицией в словаре 
 count = 0 # Переменная счетчик
 
-for i in list(word):
+for i in list(word): #Проверка буквы  
     if i not in dic:
         print(f"Ошибка. В словаре нету буквы - '{i}' !\n")
-        break
-
+        word = str(input('Введите слово для того чтобы узнать его номер с буквами которые прописаны в словаре!\n'))
 
 for i in list(word):
     for j in range(len(dic)):
         if i == dic[j]:
             r.append(j+1)
 print(r)
+
 #   Непосредственно вывод номера
 while k != 0:
     k -= 1
@@ -51,9 +51,9 @@ print(N)
 
 N = int(input('Введите номер \n'))
 n = len(dic)
-k = []
+k = [] 
 k1 = ''
-print(N)
+
 while N > len(dic):
     r = 0
     if N % n == 0:
@@ -71,7 +71,8 @@ while N > len(dic):
 k.append(int(N))
 k.reverse()
 
-# Преобразования полученного номера в буквы
+# Преобразования полученной цифры в букву
 for i in k:
     k1 += dic[i-1]
+
 print(f'\nЗакодированное слово - "{k1}" ')
