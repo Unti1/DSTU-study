@@ -1,12 +1,11 @@
-# 1.5
 #1
-A = []
-n = int(input("Сколько элементов будет в множестве ?\n"))
+A = [int(input('Введите значение\n')) for i in range(int(input('Сколько элементов будет в множестве ?\n'))) ]
 
-for i in range(n):
-    A.append(input('Введите знавение\n'))
+# n = int(input("Сколько элементов будет в множестве ?\n"))
+# for i in range(n):
+#     A.append(input('Введите знавение\n'))
 
-for i in range(n):
+for i in range(len(A)):
     print(f'{i}\t{A[i]}')
 
 #2

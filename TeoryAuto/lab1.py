@@ -60,7 +60,7 @@ while N > len(dic):
         r = n
         N -= r
         k.append(r)   
-        print(N)
+        # print(N)
     else:
         while N % n != 0:
             r += 1
