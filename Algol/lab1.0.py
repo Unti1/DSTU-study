@@ -18,18 +18,24 @@ array2 = word2.split(' ')
 
 def comparison(val1,val2):
     array3 = []
-    if len(val1)>len(val2):
-        for i in val1:
+    for i in val1:
             if i in val2:
                 array3.append(i)
-    else:
-        for i in val2:
-            if i in val1:
-                array3.append(i)
     return(array3)
-    
-print(comparison(array1,array2))
 
+def nocomparison(val1,val2):
+    array3 = []
+    for i in val1:
+        if i not in val2:
+            array3.append(i)
+    for i in val2:
+        if i not in val1:
+            array3.append(i)
+    return(array3)
+
+
+print(comparison(array1,array2))
+print(nocomparison(array1,array2))
 #3
 
 S = ['a','к','ф','r',2,3,'e']
