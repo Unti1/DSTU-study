@@ -31,4 +31,4 @@ with open(filename,"r",encoding='utf8') as f:
 with open(filename,'w',encoding='utf8') as f:
     for i in s1:
         word += i
-    print(word,file=f)    
+    print(word,file=f)
