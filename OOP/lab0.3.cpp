@@ -7,7 +7,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	int x;
 	float y;
-	cout << "Введите значение переменных x и y\n";
+	cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ  x Рё y\n";
 	cin >> x >> y;
 	cout.unsetf(ios::dec);
 	cout.setf(ios::oct);
