@@ -8,9 +8,9 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	string st1,st2,st3;
 	double x, y, z;
-	cout << "Ââåäèòå çíà÷åíèÿ x,y,z \n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ x,y,z \n";
 	cin >> x >> y >> z;
-	cout << "Ââåäèòå çíà÷åíèÿ st1,st2,st3\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ st1,st2,st3\n";
 	cin >> st1 >> st2 >> st3;
 	cout << st1 << setfill('.') << setw(40) << x << endl;
 	cout << st2 << setfill('.') << setw(40) << y << endl;
