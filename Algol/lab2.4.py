@@ -31,7 +31,7 @@ def uni_word(filename):
 
     for i in range(len(filetxs)):
         filetext = filetxs[i].split('\n')[0]
-        filetext.translate(str.maketrans('', '', string.punctuation))
+        filetext = filetext.translate(str.maketrans('', '', string.punctuation))
         list_of_word = filetext.split(' ')
         for j in range(len(list_of_word)):
             dict_of_words.append(list_of_word[j])
@@ -43,4 +43,5 @@ def uni_word(filename):
             u_dict.append(val[0])
 
     return u_dict
+
 print(uni_word("sym3.txt"))
