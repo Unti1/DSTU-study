@@ -22,6 +22,10 @@ Lab2_SE_for_Marina/3.py
 Lab2_SE_for_Marina/4.py
 Lab2_SE_for_Marina/5.py
 Lab2_SE_for_Marina/all_in.py
+.metals
+.vscode
+.project
+.bloop
 google.png
 img.png
 imgur.jpg
@@ -37,6 +41,7 @@ search_pic.png
 2 course/Lab2_SE_for_Marina/all_in.py
 2 course/LabPan_SE_for_Marina/AppleStore.csv
 2 course/LabPan_SE_for_Marina/M_lab5_Pandas.ipynb
+vk_pages.txt
 Scala/HraniGospod/target/scala-2.13/update/update_cache_2.13/inputs
 Scala/HraniGospod/target/scala-2.13/update/update_cache_2.13/output
 Scala/HraniGospod/target/streams/_global/_global/csrLogger/_global/streams/out
@@ -72,11 +77,8 @@ Scala/HraniGospod/target/streams/test/scalacOptions/_global/streams/out
 Scala/HraniGospod/target/streams/test/unmanagedClasspath/_global/streams/export
 Scala/HraniGospod/target/streams/test/unmanagedClasspath/_global/streams/out
 Scala/HraniGospod/target/streams/test/unmanagedJars/_global/streams/export
-Scala/HraniGospod/build.sbt
 Scala/HraniGospod/project/build.properties
 Scala/HraniGospod/project/metals.sbt
-Scala/HraniGospod/project/.bloop/bloop.settings.json
-Scala/HraniGospod/project/.bloop/hranigospod-build.json
 Scala/HraniGospod/project/project/metals.sbt
 Scala/HraniGospod/project/project/project/target/config-classes/$624fd9c4817c4a225103.cache
 Scala/HraniGospod/project/project/project/target/config-classes/$624fd9c4817c4a225103.class
@@ -192,27 +194,3 @@ Scala/HraniGospod/project/target/streams/runtime/unmanagedClasspath/_global/stre
 Scala/HraniGospod/project/target/streams/runtime/unmanagedJars/_global/streams/export
 Scala/HraniGospod/project/target/streams/test/bloopGenerate/_global/streams/out
 Scala/HraniGospod/project/target/streams/test/bloopPostGenerate/_global/streams/out
-Scala/HraniGospod/.vscode/settings.json
-Scala/HraniGospod/.metals/metals.h2.db
-Scala/HraniGospod/.metals/metals.log
-Scala/HraniGospod/.bloop/bloop.settings.json
-Scala/HraniGospod/.bloop/hranigospod-test.json
-Scala/HraniGospod/.bloop/hranigospod.json
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-zDAgC42aS-myNwfrS5bIEw==-0hB32WpSTgmOh9egsCwfAg==/Main.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-zDAgC42aS-myNwfrS5bIEw==-0hB32WpSTgmOh9egsCwfAg==/Main$.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-zDAgC42aS-myNwfrS5bIEw==-0hB32WpSTgmOh9egsCwfAg==/Main$delayedInit$body.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-zDAgC42aS-myNwfrS5bIEw==-0hB32WpSTgmOh9egsCwfAg==/META-INF/semanticdb/src/main/scala/Main.scala.semanticdb
-Scala/HraniGospod/.metals/metals.lock.db
-Scala/HraniGospod/.bloop/hranigospod/bloop-bsp-clients-classes/classes-Metals-HuDxKM-JTc6zvMbObzbckQ==/lab1.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-bsp-clients-classes/classes-Metals-HuDxKM-JTc6zvMbObzbckQ==/Main.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-bsp-clients-classes/classes-Metals-HuDxKM-JTc6zvMbObzbckQ==/Main$.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-bsp-clients-classes/classes-Metals-HuDxKM-JTc6zvMbObzbckQ==/Main$delayedInit$body.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-bsp-clients-classes/classes-Metals-HuDxKM-JTc6zvMbObzbckQ==/META-INF/semanticdb/src/main/scala/lab1.scala.semanticdb
-Scala/HraniGospod/.bloop/hranigospod/bloop-bsp-clients-classes/classes-Metals-HuDxKM-JTc6zvMbObzbckQ==/META-INF/semanticdb/src/main/scala/Main.scala.semanticdb
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-2o4DbuqCSx6KzQHZVyjf5w==-C29IYYL9SNa8J5AyGboCPQ==/lab1.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-2o4DbuqCSx6KzQHZVyjf5w==-C29IYYL9SNa8J5AyGboCPQ==/Main.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-2o4DbuqCSx6KzQHZVyjf5w==-C29IYYL9SNa8J5AyGboCPQ==/Main$.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-2o4DbuqCSx6KzQHZVyjf5w==-C29IYYL9SNa8J5AyGboCPQ==/Main$delayedInit$body.class
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-2o4DbuqCSx6KzQHZVyjf5w==-C29IYYL9SNa8J5AyGboCPQ==/META-INF/semanticdb/src/main/scala/lab1.scala.semanticdb
-Scala/HraniGospod/.bloop/hranigospod/bloop-internal-classes/classes-Metals-2o4DbuqCSx6KzQHZVyjf5w==-C29IYYL9SNa8J5AyGboCPQ==/META-INF/semanticdb/src/main/scala/Main.scala.semanticdb
-vk_pages.txt
