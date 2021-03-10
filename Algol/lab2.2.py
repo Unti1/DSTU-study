@@ -6,6 +6,7 @@ word = ''
 filename = 'sym.txt'
 dicEn = tuple('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
 
+#Генератор текста в файле
 with open(filename, "w",encoding='utf8') as f:
     while i != n:
         i += 1
