@@ -1,53 +1,30 @@
-from collections import Counter
+import itertools
+#1 задание
+n = 5
+cout = 0
+E = ['0','1']
+posl = []
+posl_c = []
+for j in range(n):
+    for i in itertools.combinations_with_replacement(E,j):
+        for e in itertools.permutations(i):
+            posl.append(e)
 
-form = '(a+c)*b(a+d)*b(a+c)*'
-f_form = form
-# sim_val = list(f)
-oper = []
-val = ''
-max_ind = len(form)
+posl = list((set(posl)))
+posl.sort()
+print(posl)
+word = ''
 
-# Выборка выражений со скобками
-while (form.find('(') >= 0)or(form.find(')') >= 0)or(form.find('*') >= 0):
-    start_index = form.find('(')
-    end_index = form.find(')')
-    zvezd_index = form.find('*')
-    
-    if zvezd_index == end_index + 1:
-        oper.append(form[start_index:zvezd_index+1])
-        form = form[zvezd_index+1:]
-    elif zvezd_index <= end_index:
-        offset = end_index - zvezd_index + 2 
-        oper.append(form[start_index : zvezd_index + offset])
-        form = form[zvezd_index + offset :]
-        print(form)
-    else:
-        oper.append(form[start_index:end_index+1])
-        form = form[end_index+1:]
-    
-    if len(form) == 1:
-        form = ''
+for i in posl:
+    for j in i:
+        word += j
+    posl_c.append(word)
+    word = ''
+print(posl_c)
 
-form = f_form
-print(oper)
+for i in posl_c:
+    if '101' in i:
+        posl_c.remove(i)
+print(posl_c)
 
-# Вычет повторяющихся формул для подсчета внескобочных символов
-counter = Counter(oper)
-for i in oper:
-    if counter[i] != 1:
-        oper.remove(i)
-        counter = Counter(oper)
-
-#дописать
-s = oper
-for op in s:
-    non_form = form.split(op)
-    for i in non_form:
-        if i != '':
-            form = i
-
-for i in non_form:
-    if '' in non_form:
-        non_form.remove('')
-
-print(non_form)
+#2 задание
