@@ -1,7 +1,7 @@
 import random
 import time
 
-elements = (20,500, 1000, 3000, 5000, 10000)
+elements = (5000,)#,500, 1000, 3000, 5000, 10000)
 
 
 # генератор для чисел (не люблю ввод ручками)
@@ -9,7 +9,7 @@ def generator_of_nums(n):
     nums = []
     i = 0
     while i != n:
-        nums.append(random.randint(1,100000))
+        nums.append(random.randint(1,10**8))
         i += 1 
     return nums
 
@@ -120,12 +120,14 @@ def quick_sort(nums):
 # Функция для вывода алгоритмов
 def func_return(n,elements):
     for i in elements:
-        print(f'\t Размер массива {i}')
         list_of_nums = generator_of_nums(i)
+        copy_list = list_of_nums
+        print(f'\t Размер массива чисел {i}')
         # if i == 20 :
         #     list_of_nums = self_generator_of_nums(i)
         # else:
         #     list_of_nums = generator_of_nums(i)
+        
         if n == 1:
             sorted_list = insertion_sort(list_of_nums)
         elif n == 2:
@@ -133,12 +135,21 @@ def func_return(n,elements):
         elif n == 3:
             sorted_list = bubble_sort(list_of_nums)
         elif n == 4:
-            sorted_list = quick_sort(list_of_nums)
-        for k in (25,50,75):
+            quick_sort(list_of_nums)
+            sorted_list = list_of_nums
+
+        for proc in (25,50,75):
             list_of_nums = generator_of_nums(i)
-            list_of_nums[:(len(list_of_nums)//k)] = sorted_list[:(len(list_of_nums)//k)]
-            print(f'При заполнении {k}% сортированными элементами')
-            insertion_sort(list_of_nums)
+            list_of_nums[:(len(list_of_nums)//proc)] = sorted_list[:(len(list_of_nums)//proc)]
+            print(f'При заполнении {proc}% сортированными элементами')
+            if n == 1:
+                insertion_sort(list_of_nums)
+            elif n == 2:
+                selection_sort(list_of_nums)
+            elif n == 3:
+                bubble_sort(list_of_nums)
+            elif n == 4:
+                quick_sort(list_of_nums)
     
 print('\n\tАлгоритм простого включения\n')
 func_return(1,elements)
