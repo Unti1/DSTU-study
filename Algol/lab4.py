@@ -1,29 +1,39 @@
 import random
 import time
 
-elements = (500, 1000, 3000, 5000, 10000)
+elements = (20,500, 1000, 3000, 5000, 10000)
 
-# генератор для чисел
+
+# генератор для чисел (не люблю ввод ручками)
 def generator_of_nums(n):
-        nums = []
-        i = 0
-        while i != n:
-            nums.append(random.randint(1,100000))
-            i += 1 
-        return nums
+    nums = []
+    i = 0
+    while i != n:
+        nums.append(random.randint(1,100000))
+        i += 1 
+    return nums
+
+# Функция для воовода элементов ручками (для 20 элементов в частности)
+def self_generator_of_nums(n):
+    nums = []
+    i = 0
+    while i != n:
+        nums.append(int(input('Введите цифру: ')))
+        i += 1 
+    return nums
 
 # Декоратор для времени
 def timeline(func):
-    def warp(x):
+    def warp(x,*y):
         start_time = time.time()
         value = func(x)
         end_time = time.time()
         time_n = end_time - start_time
-        print(f'Время затраченое на выполнение функции: {round(time_n,6)}')
+        print(f'Время затраченое на выполнение функции: {round(time_n,12)} s.')
         return value
     return warp
 
-
+# Алгоритм прямого вывода
 @timeline
 def insertion_sort(nums):  
     # Сортировку начинаем со второго элемента, т.к. считается, что первый элемент уже отсортирован
@@ -40,6 +50,7 @@ def insertion_sort(nums):
         nums[j + 1] = item_to_insert
     return nums
 
+# Алгоритм прямого выбора
 @timeline
 def selection_sort(nums):  
     # Значение i соответствует кол-ву отсортированных значений
@@ -54,6 +65,7 @@ def selection_sort(nums):
         nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
         return nums
 
+# Алгоритм прямого обмена (метод пузырька)
 @timeline
 def bubble_sort(nums):  
     # Устанавливаем swapped в True, чтобы цикл запустился хотя бы один раз
@@ -68,7 +80,7 @@ def bubble_sort(nums):
                 swapped = True
     return(nums)
 
-@timeline
+# функция разделения для быстрой сортировки
 def partition(nums, low, high):  
     # Выбираем средний элемент в качестве опорного
     # Также возможен выбор первого, последнего
@@ -92,56 +104,47 @@ def partition(nums, low, high):
         # элемент с индексом j (справа от опорного), меняем их местами
         nums[i], nums[j] = nums[j], nums[i]
 
+# Алгорим быстрой сортировки
 @timeline
 def quick_sort(nums):  
     # Создадим вспомогательную функцию, которая вызывается рекурсивно
     def _quick_sort(items, low, high):
         if low < high:
-            # Это индекс после сводной таблицы, где наши списки разделены
+            # This is the index after the pivot, where our lists are split
             split_index = partition(items, low, high)
             _quick_sort(items, low, split_index)
             _quick_sort(items, split_index + 1, high)
 
     _quick_sort(nums, 0, len(nums) - 1)
-    return nums
 
-# Вывод алгоритмов
+# Функция для вывода алгоритмов
+def func_return(n,elements):
+    for i in elements:
+        print(f'\t Размер массива {i}')
+        list_of_nums = generator_of_nums(i)
+        # if i == 20 :
+        #     list_of_nums = self_generator_of_nums(i)
+        # else:
+        #     list_of_nums = generator_of_nums(i)
+        if n == 1:
+            sorted_list = insertion_sort(list_of_nums)
+        elif n == 2:
+            sorted_list = selection_sort(list_of_nums)
+        elif n == 3:
+            sorted_list = bubble_sort(list_of_nums)
+        elif n == 4:
+            sorted_list = quick_sort(list_of_nums)
+        for k in (25,50,75):
+            list_of_nums = generator_of_nums(i)
+            list_of_nums[:(len(list_of_nums)//k)] = sorted_list[:(len(list_of_nums)//k)]
+            print(f'При заполнении {k}% сортированными элементами')
+            insertion_sort(list_of_nums)
+    
 print('\n\tАлгоритм простого включения\n')
-for i in elements:
-    print(f'\t Размер массива {i}')
-    list_of_nums = generator_of_nums(i)
-    sorted_list = insertion_sort(list_of_nums)
-    for k in (25,50,75):
-        list_of_nums[:(len(list_of_nums)//k)] = sorted_list[:(len(list_of_nums)//k)]
-        print(f'При заполнении {k}% сортированными элементами')
-        insertion_sort(list_of_nums)
-
+func_return(1,elements)
 print('\n\tАлгоритм прямого выбора\n')
-for i in elements:
-    print(f'\t Размер массива {i}')
-    list_of_nums = generator_of_nums(i)
-    sorted_list = selection_sort(list_of_nums)
-    for k in (25,50,75):
-        list_of_nums[:(len(list_of_nums)//k)] = sorted_list[:(len(list_of_nums)//k)]
-        print(f'При заполнении {k}% сортированными элементами')
-        selection_sort(list_of_nums)
-
+func_return(2,elements)
 print('\n\tАлгоритм прямого обмена\n')
-for i in elements:
-    print(f'\t Размер массива {i}')
-    list_of_nums = generator_of_nums(i)
-    sorted_list = bubble_sort(list_of_nums)
-    for k in (25,50,75):
-        list_of_nums[:(len(list_of_nums)//k)] = sorted_list[:(len(list_of_nums)//k)]
-        print(f'При заполнении {k}% сортированными элементами')
-        bubble_sort(list_of_nums)
-
+func_return(3,elements)
 print('\n\tАлгоритм быстрой сортировки')
-for i in elements:
-    print(f'\t Размер массива {i}')
-    list_of_nums = generator_of_nums(i)
-    sorted_list = quick_sort(list_of_nums)
-    for k in (25,50,75):
-        list_of_nums[:(len(list_of_nums)//k)] = sorted_list[:(len(list_of_nums)//k)]
-        print(f'При заполнении {k}% сортированными элементами')
-        bubble_sort(list_of_nums)
+func_return(4,elements)
