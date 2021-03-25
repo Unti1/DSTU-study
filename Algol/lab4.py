@@ -1,8 +1,10 @@
 import random
 import time
 
-elements = (5000,)#,500, 1000, 3000, 5000, 10000)
+elements = (20, 500, 1000, 3000, 5000, 10000)
 
+
+гномья сортировка
 
 # генератор для чисел (не люблю ввод ручками)
 def generator_of_nums(n):
@@ -63,8 +65,7 @@ def selection_sort(nums):
                 lowest_value_index = j
         # Самый маленький элемент меняем с первым в списке
         nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
-        return nums
-
+    
 # Алгоритм прямого обмена (метод пузырька)
 @timeline
 def bubble_sort(nums):  
@@ -103,7 +104,6 @@ def partition(nums, low, high):
         # Если элемент с индексом i (слева от опорного) больше, чем
         # элемент с индексом j (справа от опорного), меняем их местами
         nums[i], nums[j] = nums[j], nums[i]
-
 # Алгорим быстрой сортировки
 @timeline
 def quick_sort(nums):  
@@ -130,11 +130,12 @@ def func_return(n,elements):
         
         if n == 1:
             sorted_list = insertion_sort(list_of_nums)
-        elif n == 2:
-            sorted_list = selection_sort(list_of_nums)
-        elif n == 3:
+        if n == 2:
+            selection_sort(list_of_nums)
+            sorted_list = list_of_nums
+        if n == 3:
             sorted_list = bubble_sort(list_of_nums)
-        elif n == 4:
+        if n == 4:
             quick_sort(list_of_nums)
             sorted_list = list_of_nums
 
@@ -144,13 +145,13 @@ def func_return(n,elements):
             print(f'При заполнении {proc}% сортированными элементами')
             if n == 1:
                 insertion_sort(list_of_nums)
-            elif n == 2:
+            if n == 2:
                 selection_sort(list_of_nums)
-            elif n == 3:
+            if n == 3:
                 bubble_sort(list_of_nums)
-            elif n == 4:
+            if n == 4:
                 quick_sort(list_of_nums)
-    
+
 print('\n\tАлгоритм простого включения\n')
 func_return(1,elements)
 print('\n\tАлгоритм прямого выбора\n')
