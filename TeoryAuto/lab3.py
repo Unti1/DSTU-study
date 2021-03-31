@@ -11,12 +11,11 @@ for i in alflist:
     dot.node(i,i)
 
 for i in range(len(alflist)):
-    print(i)
-    for val in in_cout_list[i]:
-        print(val)
+    for j in range(len(in_cout_list[i])):
+        val = in_cout_list[i][j]
         if val != '':
             v_lst = list(val)
             for sym in v_lst:
-                dot.edge(alflist[i],sym,label=countlist[0],constraint = 'false')             
+                dot.edge(alflist[i],sym,label=countlist[j],constraint = 'true')             
 # print(dot)
-dot.render('testout/test_graph.gv', view=True, format="png")
+dot.render('C:/MyProjects/DPTU/TeoryAuto/testout/test_graph.gv', view=True, format="png")
