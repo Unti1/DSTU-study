@@ -77,3 +77,4 @@ plt.ylabel('Y')
 plt.title('Трехмерная страшилка')
 plt.show()
 
+ 

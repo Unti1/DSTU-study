@@ -1,6 +1,5 @@
 import itertools
 #1 задание
-print("Задание 1 \n")
 n = 5
 cout = 0
 E = ['0','1']
@@ -15,7 +14,6 @@ posl = list((set(posl)))
 posl.sort()
 
 #  Форматирования полученных кортежей в строки
-
 word = ''
 posl_c = []
 for i in posl:
@@ -25,6 +23,7 @@ for i in posl:
     word = ''
 print(posl_c)
 
+# Выполнение условия
 posl_c2 = []
 for i in posl_c:
     if "101" not in i:
@@ -33,7 +32,7 @@ print(posl_c2)
 
 #2 задание
 print('Задание 2 \n')
-
+import itertools
 n = 5
 cout = 0
 E = ['0','1']
