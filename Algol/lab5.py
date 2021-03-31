@@ -1,6 +1,6 @@
 import random
 import math
-import matplotlib as plt
+from matplotlib import pyplot as plt
 import time
 
 n = [100,500,1000,3000,10000]
@@ -10,7 +10,7 @@ def Generate_num(n):
     return(lst)
 
 
-
+# Линейный поиск
 def LinearSearch(lst, val):
     start_time = time.perf_counter()
     for i in range(len(lst)):
@@ -20,27 +20,22 @@ def LinearSearch(lst, val):
             return (i,time_n)
     return -1
 
-
-def BarierSearch (a, x):
+# Поиск с барьером
+def BarierSearch (lst, val):
     start_time = time.perf_counter()
-    
-    array = [num for num in a]
-    array.append(x)
-    i = 0
-    
-    # двигаемся по массиву, пока требуемое значение не будет найдено
-    while array[i] != x:
+    lst.append(val)
+    i = 0    
+    while lst[i] != val:
         i += 1
-        index
-        
-    # если уткнулись в барьер, возвращаем -1
-    if i == len(array)-1:
-        return [-1, time]
     end_time = time.perf_counter()
     time_n = round((end_time - start_time),20)
-    return (-1,time_n)
+    if i == len(lst)-1:
+        return (-1, time_n)
+    else:
+        index = i
+        return (index, time_n)
 
-
+# Бинарный поиск
 def BinarySearch(lst, val):
     lst.sort()
     start_time = time.perf_counter()
@@ -60,6 +55,7 @@ def BinarySearch(lst, val):
     time_n = round((end_time - start_time),20)
     return (index,time_n)
 
+# поиск элемента и вывод значения 
 def func_return(ran):
     
     Bin_Info = []
@@ -67,25 +63,42 @@ def func_return(ran):
     Bar_Info = []
     for n in ran:
         lst = Generate_num(n)
-        arg_find = random.choice(lst)
-        inf = BinarySearch(lst,arg_find)
-        Bin_Info.append([n,inf[0],inf[1]])
-        
-        lst = Generate_num(n)
-        arg_find = random.choice(lst)
-        inf = LinearSearch(lst,arg_find)
+        arg_find = len(lst)//2
+
+        inf = LinearSearch(lst,lst[arg_find])
         Lin_Info.append([n,inf[0],inf[1]])
 
-        inf = BarierSearch(lst,arg_find)
+        inf = BarierSearch(lst,lst[arg_find])
         Bar_Info.append([n,inf[0],inf[1]])
+        
+        lst = Generate_num(n)
+        inf = BinarySearch(lst,lst[arg_find])
+        Bin_Info.append([n,inf[0],inf[1]])
+
     data = (Lin_Info,Bar_Info,Bin_Info)
     return data
 
 data_of_algols = func_return(n)
-print(data_of_algol)
-# def img_output(data):
-#     for method in data:
-        
+print(data_of_algols)
 
+# Вывод графиков
+def img_output(data):
+    yrange = []
+    xrange = []
+    fig = plt.figure(figsize=(16,9),dpi= 80)
+    name_methods = ['Линейный поиск','Поиск с барьером','Бинарный поиск']
+    for method in range(len(data)):
+        for item in data[method]:
+            xrange.append(item[0])
+            yrange.append(item[2])
+            
+        ax = fig.add_subplot(3,1,method+1)
+        ax.plot(xrange,yrange)
+        plt.ylabel('Доля секунды') 
+        plt.xlabel(name_methods[method]) 
+        xrange = []
+        yrange = []
+    plt.show()
+    return
 
-# img_output(data_of_algols)
+img_output(data_of_algols)
