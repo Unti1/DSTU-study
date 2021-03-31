@@ -1,0 +1,4 @@
+[debug] [hranigospod-test] Classpath dependencies List()
+[debug] [hranigospod-test] Dependencies from configurations List(hranigospod)
+[debug] Bloop wrote the configuration of project 'hranigospod-test' to 'C:\MyProjects\DPTU\Scala\HraniGospod\.bloop\hranigospod-test.json'
+[success] Generated .bloop\hranigospod-test.json
