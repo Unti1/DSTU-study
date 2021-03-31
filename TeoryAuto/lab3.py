@@ -18,4 +18,4 @@ for i in range(len(alflist)):
             for sym in v_lst:
                 dot.edge(alflist[i],sym,label=countlist[j],constraint = 'true')             
 # print(dot)
-dot.render('C:/MyProjects/DPTU/TeoryAuto/testout/test_graph.gv', view=True, format="png")
+dot.render('testout/test_graph.gv', view=True, format="png")
