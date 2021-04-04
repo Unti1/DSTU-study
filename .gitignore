@@ -215,3 +215,6 @@ testout/file2.txt
 testout/file3.txt
 testout/test_graph.gv.png
 temporary_files/sym2.txt
+testout/filetest.dat
+testout/file2.pkl
+testout/file2.dat
