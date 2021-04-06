@@ -246,6 +246,7 @@ class Ui_MainWindow(object):
 
 
     def decoding_function(self):
+
         filename3 = 'testout/file3.txt'
         with open('testout/file1.txt',"r",encoding="utf-8") as f:
             file_text = f.read() 
