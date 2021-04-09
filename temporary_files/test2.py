@@ -4,7 +4,7 @@ class Node:
         self.right = right
         self.left = left
         self.value = value
-
+#Жопа
 def get_tree(text):
     text_count = Counter(text) # подсчет частоты повторений
 
