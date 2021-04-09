@@ -71,9 +71,9 @@ def coding(text, codes):
     # добавление вероятности
     text_count = Counter(text)
     pwr = len(text)
-    dic_ver = []
+    dic_ver = ''
     for i in text_count.keys():
-        dic_ver.append([i,text_count.get(i)/pwr])
+        dic_ver += f'|{i}:{text_count.get(i)/pwr}'
     res += "\n"+str(dic_ver)
     
     return res
@@ -93,19 +93,6 @@ def decoding(text, codes):
     return res
 
 # (coding и decoding) function стояли раньше здесь
-
-'''
-# Проверка на точность перевода
-with open("testout/file1.txt",'r',encoding='utf-8') as f:
-    with open ("testout/file2.txt",'r',encoding='utf-8') as f1:
-        text1 = f.read()
-        text2 = f1.read()
-        if text1 == text2:
-            print("Успех")
-        else:
-            pass
-            # print("Неудача")
-'''
 
 # Меню 
 # -*- coding: utf-8 -*-
@@ -255,10 +242,25 @@ class Ui_MainWindow(object):
         with open('testout/file2.txt',"r") as f:
             text = f.read()
             textlist = text.split('\n')
+            for_shifr = textlist[-1]
+            # print(for_shifr)
             textlist.remove(textlist[-1])
             text = ''
             for i in textlist:
                 text += i
+
+        # Выбираем список вероятностей из файла с шифром
+        shifr_list_1 = for_shifr.split('|')
+        shifr_list = []
+        def sortByNum(inputStr):
+                return inputStr[1]
+        for val in shifr_list_1:
+            if val != '':
+                timeless_list = []
+                timeless_list.append(val.split(':')[0])
+                timeless_list.append(float(val.split(':')[1]))
+                shifr_list.append(timeless_list)
+        shifr_list.sort(key=sortByNum,reverse=True)
         
         decoding_text = decoding(text, codes)
         # print('Исходная строка: ', decoding_text)
@@ -285,10 +287,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
-
-
-# ! Создать меню 
-# ! Информацию о 0 и 1 в битовую
-# ! В конец второго файла дописать вероятности
-# В декодировании считывать вероятности и строить шифр заного , по таблице 
