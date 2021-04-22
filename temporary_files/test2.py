@@ -4,7 +4,7 @@ class Node:
         self.right = right
         self.left = left
         self.value = value
-#Жопа
+
 def get_tree(text):
     text_count = Counter(text) # подсчет частоты повторений
 
@@ -119,13 +119,41 @@ sum1 = 0
 index_list = []
 index_list1 = []
 ent_list = []
-for i in range(len(shifr_list)):
-    if sum <= 0.5:
-        index_list.append(i)
-        sum += shifr_list[i][1]
-        ent_list.append(shifr_list[i])
-    else:
-        index_list1.append(i)
-        sum1 += shifr_list[i][1]
+approx = 0.5
+# for i in range(len(shifr_list)):
+#     if sum <= approx:
+#         index_list.append(i)
+#         sum += shifr_list[i][1]
+#         ent_list.append(shifr_list[i])
+#         approx /= 2
+
+#         for i in range(len(ent_list)):
+#                 if sum <= approx:
+#                     index_list.append(i)
+#                     sum += shifr_list[i][1]
+#                     ent_list.append(shifr_list[i])
+
+
+def code_ver_dec(approx,code = list()):
+    sum = 0
+    new_list = []
+    other_list = []
+    word = ''
+    for i in range(len(code)):
+        if sum <= approx:
+            sum += code[i][1]
+            new_list.append(shifr_list[i])
+        else:
+            other_list.append(shifr_list[i])
+    new_approx = approx/2
+    print(new_list)
+
+    if len(code) != 1:
+        return(code_ver_dec(new_approx,new_list))
+
+print(code_ver_dec(0.5,shifr_list))
+#     else:
+#         index_list1.append(i)
+#         sum1 += shifr_list[i][1]
          
-print(index_list,sum,sum1)       
+# print(index_list,sum,sum1)       

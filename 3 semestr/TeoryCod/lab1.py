@@ -1,4 +1,4 @@
-# алгоритм Хаффмана.
+# алгоритм Шеннона-Фено.
 from collections import Counter
 import pickle
 # Узлы для построения древа
@@ -193,7 +193,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Алгоритм Хаффмана"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Алгоритм Шеннона-Фено"))
         self.pushButton.setText(_translate("MainWindow", "Кодировать"))
         self.pushButton_2.setText(_translate("MainWindow", "Декодировать"))
         self.label.setText(_translate("MainWindow", "Файл : file1.txt"))
