@@ -1,14 +1,10 @@
-from typing import Any
-
+import heapq
 
 class SolidStack: # Сплошное представление
     def __init__(self,lys=list()):
         self.lys = lys
         self.index = 0    
     
-    def create(self,lys=list()):
-        self.index = 0    
-
     def addit(self,arg,index = int()):
         if index == len(self.lys):
             return('ОШИБКА')
@@ -35,34 +31,45 @@ print("Удаление из стека 1 : ",MySolidStack.deleteit(1))
 class ChainStack: # Цепное представление
     def __init__(self,lys=list()):
         self.lys = lys
-        
-    def create(self,lys=list()):
-        self.lys = lys
-        return(lys)
+        self.top = 0
+        self.ukaz = 0
     
-    def push(self,value):
-        self.lys.append(value)
+    def create(self,ind):
+        self.ukaz = ind
+
+    def addnew(self,value):
+        self.lys.insert(self.top,None)
+        self.lys[self.top] = value
         return(self.lys)
     
-    def pop(self):
-        if self.lys != []:
-            item = self.lys.pop()
-            return(item)
+    def removelast(self,error = False):
+        if self.ukaz != 0 :
+            info = self.lys[self.ukaz]
+            self.ukaz -= 1
+            return(info)
         else:
-            return("Стек пустой")
+            error = True
+            return("Стек пустой",error)
     
-    def readlast(self):
-        return(self.lys[-1])
+    def last(self,error = False):
+        if self.top == self.ukaz:
+            print('Стек пуст')
+            error = True
+            exit(-1)
+        else:
+            return('Вершина - ', self.lys[self.ukaz])
 
     def readall(self):
-        for i in self.lys[::-1]:
-            print(i)
-        return
+        while self.top != self.ukaz:
+            print(self.lys[self.top])
+            self.top += 1
+        
 print('--Цепное представлени стека--')
-MyChainStack = ChainStack([1,2,3])
-print("Добавленеи элемента в конец : ",MyChainStack.push(2))
-print("Выбор из стека последнего элемента : ",MyChainStack.pop())
-print("Считывание последнего элемента :",MyChainStack.readlast())
+MyChainStack = ChainStack([1,2,3,4,4,5])
+MyChainStack.create(6)
+print("Добавленеи элемента в конец : ",MyChainStack.addnew(2))
+print("Выбор(удаление) из стека последнего элемента : ",MyChainStack.removelast())
+print("Считывание последнего элемента :",MyChainStack.last())
 print("Считывание всех элементов в стеке : ")
 MyChainStack.readall()
 
