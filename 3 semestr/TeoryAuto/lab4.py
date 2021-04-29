@@ -119,7 +119,6 @@ non = []
 for val in table.index:
     if val not in nq:
         non.append(val)
-print(non)
 
 def st_remove(table = pd.DataFrame() ,vals = list()):
     vals = vals
@@ -129,7 +128,9 @@ def st_remove(table = pd.DataFrame() ,vals = list()):
         return(st_remove(new_table,vals))
     else:
         return(table)
-print(st_remove(table,non))
+new_table = st_remove(table,non)
+
+
 
 # Визуализация минимизации
 def vizual_graph(table):
@@ -141,4 +142,5 @@ def vizual_graph(table):
     for start in table.index:
         for label in table.columns:
             dot.edge(start , table[label][start] ,label=label,constraint = 'true')
-    # dot.render(filename, view=True, format="png")
+    dot.render(filename, format="png")
+vizual_graph(new_table)
