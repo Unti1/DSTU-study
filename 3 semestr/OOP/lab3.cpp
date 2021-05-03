@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     // Задание 2
-	
+	/*
 	int i = 5;
 	int j = 12;
 	int k = 7;
@@ -14,9 +14,9 @@ int main()
 	k = (--i + 2 * j - k++, j-- + i - k);
 
 	cout << i << endl << j << endl << k;
-	
+	*/
 
-	/*
+	
 	// Задание 3
 	int i, j, k, l;
 	cin >> i >> j >> k >> l;
@@ -25,7 +25,7 @@ int main()
 	
 	//каждый сдвиг слева умножаем на 2 ; каждый сдвиг вправо делим на 2 ;
 	cout << m;
-	*/
+	
 
 	/*
 	// Задание 4

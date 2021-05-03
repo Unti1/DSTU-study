@@ -18,7 +18,7 @@ void task8()
 	i = 0;
 	if (s)
 	{
-		flag = flag + pow(2, i);
+		flag = flag + 1 << i;
 		s = 1;
 	}
 	cout << "block 2: ";
@@ -26,7 +26,7 @@ void task8()
 	i = 1;
 	if (s)
 	{
-		flag = flag + pow(2, i);
+		flag = flag + 1 << i;
 		s = 1;
 
 	}
@@ -35,7 +35,7 @@ void task8()
 	i = 2;
 	if (s)
 	{
-		flag = flag + pow(2, i);
+		flag = flag + 1 << i;
 		s = 1;
 
 	}
@@ -44,7 +44,7 @@ void task8()
 	i = 3;
 	if (s)
 	{
-		flag = flag + pow(2, i);
+		flag = flag + 1 << i;
 		s = 1;
 
 	}
@@ -53,7 +53,7 @@ void task8()
 	i = 4;
 	if (s)
 	{
-		flag = flag + pow(2, i);
+		flag = flag + 1 << i;
 		s = 1;
 	}
 	cout << "block 6: ";
@@ -61,7 +61,7 @@ void task8()
 	i = 5;
 	if (s)
 	{
-		flag = flag + pow(2, i);
+		flag = flag + 1 << i;
 		s = 1;
 
 	}
@@ -70,7 +70,7 @@ void task8()
 	i = 6;
 	if (s)
 	{
-		flag = flag + pow(2, i);
+		flag = flag + 1 << i;
 		s = 1;
 
 	}

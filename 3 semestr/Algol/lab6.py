@@ -38,14 +38,14 @@ class ChainStack: # Цепное представление
         self.ukaz = ind
 
     def addnew(self,value):
-        self.lys.insert(self.top,None)
-        self.lys[self.top] = value
+        self.lys.insert(self.ukaz,1)
+        self.lys[self.ukaz] = value
         return(self.lys)
     
     def removelast(self,error = False):
         if self.ukaz != 0 :
             info = self.lys[self.ukaz]
-            self.ukaz -= 1
+            self.ukaz -= 1 
             return(info)
         else:
             error = True
@@ -57,7 +57,7 @@ class ChainStack: # Цепное представление
             error = True
             exit(-1)
         else:
-            return('Вершина - ', self.lys[self.ukaz])
+            return('Вершина = ', self.lys[self.top])
 
     def readall(self):
         while self.top != self.ukaz:
@@ -65,11 +65,12 @@ class ChainStack: # Цепное представление
             self.top += 1
         
 print('--Цепное представлени стека--')
-MyChainStack = ChainStack([1,2,3,4,4,5])
-MyChainStack.create(6)
-print("Добавленеи элемента в конец : ",MyChainStack.addnew(2))
+MyChainStack = ChainStack([1,2,3,4,5])
+MyChainStack.create(len(MyChainStack.lys))
+el = 90
+print(f"Добавленеи элемента {el} в конец : ",MyChainStack.addnew(el))
 print("Выбор(удаление) из стека последнего элемента : ",MyChainStack.removelast())
-print("Считывание последнего элемента :",MyChainStack.last())
+print("Считывание конечного элемента :",MyChainStack.last())
 print("Считывание всех элементов в стеке : ")
 MyChainStack.readall()
 
