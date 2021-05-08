@@ -313,7 +313,7 @@ class Ui_MainWindow(object):
         with open('testout/pixel_compress_info.txt','w') as f:
             void = ''
             for i in compressed_text:
-                void += f' {i} '
+                void += f'{i} '
             f.write(void)
                     
     def dearchivation(self):
