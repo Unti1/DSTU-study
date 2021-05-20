@@ -28,49 +28,15 @@ print("Добавление элемента в стек : ",MySolidStack.addit(
 print("Удаление из стека 1 : ",MySolidStack.deleteit(1))
 
 
-class ChainStack: # Цепное представление
-    def __init__(self,lys=list()):
-        self.lys = lys
-        self.top = 0
-        self.ukaz = 0
-    
-    def create(self,ind):
-        self.ukaz = ind
 
-    def addnew(self,value):
-        self.lys.insert(self.ukaz,1)
-        self.lys[self.ukaz] = value
-        return(self.lys)
-    
-    def removelast(self,error = False):
-        if self.ukaz != 0 :
-            info = self.lys[self.ukaz]
-            self.ukaz -= 1 
-            return(info)
-        else:
-            error = True
-            return("Стек пустой",error)
-    
-    def last(self,error = False):
-        if self.top == self.ukaz:
-            print('Стек пуст')
-            error = True
-            exit(-1)
-        else:
-            return('Вершина = ', self.lys[self.top])
 
-    def readall(self):
-        while self.top != self.ukaz:
-            print(self.lys[self.top])
-            self.top += 1
-        
 print('--Цепное представлени стека--')
-MyChainStack = ChainStack([1,2,3,4,5])
-MyChainStack.create(len(MyChainStack.lys))
+# MyChainStack = ChainStack([1,2,3,4,5])
+# MyChainStack.create(len(MyChainStack.lys))
 el = 90
-print(f"Добавленеи элемента {el} в конец : ",MyChainStack.addnew(el))
-print("Выбор(удаление) из стека последнего элемента : ",MyChainStack.removelast())
-print("Считывание конечного элемента :",MyChainStack.last())
-print("Считывание всех элементов в стеке : ")
-MyChainStack.readall()
+# print(f"Добавленеи элемента {el} в конец : ",MyChainStack.addnew(el))
+# print("Выбор(удаление) из стека последнего элемента : ",MyChainStack.removelast())
+# print("Считывание конечного элемента :",MyChainStack.last())
+# print("Считывание всех элементов в стеке : ")
+# MyChainStack.readall()
 

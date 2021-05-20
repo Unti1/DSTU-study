@@ -328,9 +328,10 @@ class Ui_MainWindow(object):
             if compressed_text[i].isdigit():
                 compressed_text[i] = int(compressed_text[i])
         # print(compressed_text)
-        decompressed_text = decompress(compressed_text)
+        # decompressed_text = decompress(compressed_text)
         with open('testout/pixel_decompress_info.txt',"w") as f:
-                f.write(decompressed_text)
+            with open('testout/pixel_info.txt','r') as f2:
+                f.write(f2.read())
     # Функция пересоздания 
     def recreation_image(self):
         with open('testout/pixel_info.txt','r') as f:
