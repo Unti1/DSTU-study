@@ -25,15 +25,15 @@ class Chain(Node):
     
     def addnew(self,value):
         self.node["next"] = self.node["recorder"] 
+        self.node["recorder"] = id(self.node)
         self.node = dict(self.node)
         self.node["info"] = value
         self.node["index"] += 1
-        self.node["recorder"] = id(self.node)
         return self.node
     
     def removelast(self):
         val = ctypes.cast( self.node["next"],ctypes.py_object )
-        print('сука - ',val.value)
+        print(' - ',val.value)
         # val2 = ctypes.cast( val.value["next"],ctypes.py_object )
         # print('сука - ',val2.value)
         # self.node["recorder"] = self.node["next"] 
@@ -53,7 +53,7 @@ class Chain(Node):
 new = Chain()
 print(new.init())
 print(new.addnew(2))
-# print(new.addnew(8))
+print(new.addnew(8))
 print(new.removelast())
 # new.addnew(32)
 # print(new.readall())
