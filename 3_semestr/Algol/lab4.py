@@ -1,5 +1,6 @@
 import random
 import time
+from numba import njit,prange
 
 elements = (20, 500, 1000, 3000, 5000, 10000)
 
