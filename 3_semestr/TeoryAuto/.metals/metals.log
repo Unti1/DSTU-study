@@ -1,0 +1,7 @@
+[0m2021.03.30 22:32:23 INFO  Started: Metals version 0.10.0 in workspace 'C:\MyProjects\DPTU\TeoryAuto' for client vscode 1.54.3.[0m
+[0m2021.03.30 22:32:24 INFO  time: initialize in 1.48s[0m
+[0m2021.03.30 22:32:26 WARN  Build server is not auto-connectable.[0m
+[0m2021.03.30 22:32:26 WARN  no build tool detected in workspace 'C:\MyProjects\DPTU\TeoryAuto'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+мар 31, 2021 11:40:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+[0m2021.04.01 00:01:00 INFO  shutting down Metals[0m

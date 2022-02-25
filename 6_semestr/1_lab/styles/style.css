@@ -1,0 +1,35 @@
+body{
+    background: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1613444780_78-p-fon-dlya-prezentatsii-pro-biblioteku-84.jpg);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+table{
+background-color: rgba(0, 0, 0, 0.5);
+}
+td{
+    color:rgba(255, 255, 255, 1)
+}
+td:hover{
+    background-color:rgba(0, 0, 0, 0.1)
+}
+a{
+    color:rgba(255, 0, 0, 1);
+    text-decoration-line: none;
+}
+.tt2:hover{
+    background-color:rgba(0, 0, 255, 0.2);
+}
+
+.title_tx{
+    font-size: 60px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.header{
+    background-color: rgba(110, 54, 134, 0.445);
+}
+.zagolovok{
+    font-size: 30px;
+    font-weight: bold;
+}

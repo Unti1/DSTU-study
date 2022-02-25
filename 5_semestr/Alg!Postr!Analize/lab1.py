@@ -2,7 +2,7 @@ import random
 import time
 import numpy as np
 from numba import njit,prange
-elements = (10,100,1000,10000,100000,500000)
+elements = (10,100,1000,10000,100000)
 
 
 
@@ -359,10 +359,10 @@ class Ui_MainWindow(object):
     f"100 элементов : {time_list[1]} ms\n"
     f"1000 элементов : {time_list[2]} ms\n"
     f"10000 элементов : {time_list[3]} ms\n"
-    f"100000 элементов : {time_list[4]} ms\n"
-    f"500000 элементов : {time_list[5]} ms\n"
-    f"50% сортированных : {time_list[6]} ms\n"
-    f"100% сортированных : {time_list[7]} ms"))
+    f"100000 элементов : {time_list[4]} ms\n"))
+    # f"500000 элементов : {time_list[5]} ms\n"
+    # f"50% сортированных : {time_list[6]} ms\n"
+    # f"100% сортированных : {time_list[7]} ms"))
     
     def func_return3(self):
         _translate = QtCore.QCoreApplication.translate
@@ -394,10 +394,11 @@ class Ui_MainWindow(object):
     f"100 элементов : {time_list[1]} ms\n"
     f"1000 элементов : {time_list[2]} ms\n"
     f"10000 элементов : {time_list[3]} ms\n"
-    f"100000 элементов : {time_list[4]} ms\n"
-    f"500000 элементов : {time_list[5]} ms\n"
-    f"50% сортированных : {time_list[6]} ms\n"
-    f"100% сортированных : {time_list[7]} ms"))
+    f"100000 элементов : {time_list[4]} ms\n"))
+    # f"500000 элементов : {time_list[5]} ms\n"
+    # f"50% сортированных : {time_list[6]} ms\n"
+    # f"100% сортированных : {time_list[7]} ms"))
+    print(10)
     
     def func_return4(self):
         _translate = QtCore.QCoreApplication.translate
@@ -476,7 +477,7 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)ё
+    ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
 
