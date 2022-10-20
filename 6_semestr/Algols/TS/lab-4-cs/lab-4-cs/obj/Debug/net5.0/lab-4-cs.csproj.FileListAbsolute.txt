@@ -1,0 +1,16 @@
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\bin\Debug\net5.0\lab-4-cs.exe
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\bin\Debug\net5.0\lab-4-cs.deps.json
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\bin\Debug\net5.0\lab-4-cs.runtimeconfig.json
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\bin\Debug\net5.0\lab-4-cs.runtimeconfig.dev.json
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\bin\Debug\net5.0\lab-4-cs.dll
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\bin\Debug\net5.0\ref\lab-4-cs.dll
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\bin\Debug\net5.0\lab-4-cs.pdb
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.csprojAssemblyReference.cache
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.AssemblyInfoInputs.cache
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.AssemblyInfo.cs
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.csproj.CoreCompileInputs.cache
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.dll
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\ref\lab-4-cs.dll
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.pdb
+D:\Dev\.labs\c3-s2\is\lab-4-cs\lab-4-cs\obj\Debug\net5.0\lab-4-cs.genruntimeconfig.cache

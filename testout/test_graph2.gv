@@ -1,8 +1,0 @@
-digraph {
-	p0 [label=p0]
-	p1 [label=p1]
-	p0 -> p1 [label=a constraint=true]
-	p0 -> p0 [label=b constraint=true]
-	p1 -> p1 [label=a constraint=true]
-	p1 -> p0 [label=b constraint=true]
-}
